@@ -16,6 +16,7 @@ function Home() {
     }, [KEY]);
 
     return (
+        
         <Container>
             <h1>Movies</h1>
             <MovieList>
