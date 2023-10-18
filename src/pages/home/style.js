@@ -1,38 +1,29 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #141414; /* Cor de fundo escura semelhante à da HBO Max */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
+    padding: 2rem;
+    background-color: #f0f0f0; /* Cor de fundo mais clara */
+    font-family: Arial, sans-serif;
+    text-align: center;
 
-export const Header = styled.header`
-    background-color: #1c1c1c; /* Cor de fundo do cabeçalho */
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-export const Logo = styled.img`
-    width: 150px;
+    h1 {
+        font-size: 2.5rem;
+        margin: 2rem 0;
+        color: #333; /* Cor do texto mais escura */
+    }
 `;
 
 export const MovieList = styled.ul`
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 `;
 
 export const Movie = styled.li`
-    background-color: #1c1c1c; /* Cor de fundo do filme */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -50,7 +41,7 @@ export const Movie = styled.li`
         font-weight: bold;
         font-size: 1.2rem;
         padding: 1rem;
-        color: white;
+        color: #333;
     }
 
     a {
@@ -59,11 +50,12 @@ export const Movie = styled.li`
 `;
 
 export const Btn = styled.button`
-    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    padding: 0.5rem 2rem;
     border: none;
     border-radius: 4px;
-    color: #ffffff;
-    background-color: #ff5722; /* Cor laranja semelhante à da HBO Max */
+    color: #fff;
+    background-color: #ff5722; /* Cor laranja */
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
