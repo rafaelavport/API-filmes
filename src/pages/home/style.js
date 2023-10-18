@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     padding: 2rem;
+    background-color: #141414; /* Cor de fundo semelhante à da HBO Max */
 
     h1 {
         text-align: center;
         margin: 4rem 0;
-        color: white;
+        color: #ffffff; /* Cor do texto branca */
+        font-size: 2rem;
     }
 `;
 
@@ -23,22 +25,30 @@ export const Movie = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #282828; /* Cor de fundo semelhante à da HBO Max */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     img {
         width: 180px;
-        border-radius: 1rem;
-        margin-bottom: 2rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
     }
+
     span {
         font-weight: bold;
-        font-size: 120%;
+        font-size: 1.2rem;
         text-align: center;
-        color: white;
+        color: #ffffff; /* Cor do texto branca */
     }
+
     a {
         transition: all 0.3s;
         text-decoration: none;
-        color: white;
+        color: #ffffff; /* Cor do texto branca */
     }
+
     a:hover {
         transform: scale(1.1);
     }
@@ -49,17 +59,17 @@ export const Btn = styled.button`
     padding: 0.7rem 3rem;
     border: none;
     border-radius: 15px;
-    color: #212121;
-    background-color: #ffffff;
-    font-weight: 1000;
-    font-size: 12px;
+    color: #ffffff;
+    background-color: #ff0000; /* Cor semelhante à da HBO Max */
+    font-weight: bold;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 250ms;
-    background-color: white;
-    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &:hover {
-        background-color: #ff0000;
-        color: white;
+        background-color: #ff2222; /* Cor mais clara ao passar o mouse */
     }
 `;
+
