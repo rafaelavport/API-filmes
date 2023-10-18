@@ -6,6 +6,7 @@ export const Container = styled.div`
     h1 {
         text-align: center;
         margin: 4rem 0;
+        color: white;
     }
 `;
 
@@ -31,9 +32,12 @@ export const Movie = styled.li`
         font-weight: bold;
         font-size: 120%;
         text-align: center;
+        color: white;
     }
     a {
         transition: all 0.3s;
+        text-decoration: none;
+        color: white;
     }
     a:hover {
         transform: scale(1.1);
@@ -48,7 +52,14 @@ export const Btn = styled.button`
     color: #212121;
     background-color: #ffffff;
     font-weight: 1000;
-    font-size: 12 px;
+    font-size: 12px;
     cursor: pointer;
     transition: all 250ms;
+    background-color: white;
+    color: black;
+
+    &:hover {
+        background-color: #ff0000;
+        color: white;
+    }
 `;
