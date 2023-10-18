@@ -1,29 +1,38 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    padding: 2rem;
-    background-color: #f0f0f0; 
-    font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #141414; /* Cor de fundo escura semelhante à da HBO Max */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
 
-    h1 {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-        color: #333; 
-    }
+export const Header = styled.header`
+    background-color: #1c1c1c; /* Cor de fundo do cabeçalho */
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Logo = styled.img`
+    width: 150px;
 `;
 
 export const MovieList = styled.ul`
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    margin: 0;
-    padding: 0;
+    padding: 20px;
 `;
 
 export const Movie = styled.li`
-    background-color: #fff;
+    background-color: #1c1c1c; /* Cor de fundo do filme */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -41,7 +50,7 @@ export const Movie = styled.li`
         font-weight: bold;
         font-size: 1.2rem;
         padding: 1rem;
-        color: #333;
+        color: white;
     }
 
     a {
@@ -50,19 +59,19 @@ export const Movie = styled.li`
 `;
 
 export const Btn = styled.button`
-    margin-top: 10px;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
-    color: #fff;
-    background-color: #ff5722; 
+    color: #ffffff;
+    background-color: #ff5722; /* Cor laranja semelhante à da HBO Max */
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.2s;
 
     &:hover {
-        background-color: #ff4500; 
+        background-color: #ff4500; /* Cor laranja mais escura ao passar o mouse */
     }
 `;
+
 
