@@ -22,11 +22,17 @@ export const MovieList = styled.div`
 `;
 
 export const MovieCard = styled.div`
-  background-color: #1e1e1e;
+  background-color: #2a2a2a;
   border: 1px solid #333;
-  border-radius: 5px;
-  margin: 10px;
+  border-radius: 10px;
   width: 200px;
+  transition: transform 0.2s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const MovieImage = styled.img`
@@ -37,6 +43,11 @@ export const MovieImage = styled.img`
 export const MovieTitle = styled.h2`
   font-size: 18px;
   margin: 10px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 export const MovieButton = styled.button`
@@ -46,6 +57,13 @@ export const MovieButton = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #ff0f24;
+  }
 `;
 
 export const Footer = styled.footer`
