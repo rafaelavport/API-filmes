@@ -1,69 +1,58 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    padding: 2rem;
-    background-color: #f0f0f0; /* Cor de fundo mais clara */
-    font-family: Arial, sans-serif;
-    text-align: center;
-
-    h1 {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-        color: #333; /* Cor do texto mais escura */
-    }
+  background-color: #141414;
+  color: white;
+  font-family: Arial, sans-serif;
 `;
 
-export const MovieList = styled.ul`
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+export const Header = styled.header`
+  background-color: #141414;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-export const Movie = styled.li`
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-
-    img {
-        width: 100%;
-        border-radius: 8px 8px 0 0;
-    }
-
-    &:hover {
-        transform: translateY(-5px);
-    }
-
-    span {
-        font-weight: bold;
-        font-size: 1.2rem;
-        padding: 1rem;
-        color: #333;
-    }
-
-    a {
-        text-decoration: none;
-    }
+export const MovieList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 `;
 
-export const Btn = styled.button`
-    margin-top: 10px;
-    padding: 0.5rem 2rem;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #ff5722; /* Cor laranja */
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
+export const MovieCard = styled.div`
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 10px;
+  width: 200px;
+`;
 
-    &:hover {
-        background-color: #ff4500; /* Cor laranja mais escura ao passar o mouse */
-    }
+export const MovieImage = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
+
+export const MovieTitle = styled.h2`
+  font-size: 18px;
+  margin: 10px;
+`;
+
+export const MovieButton = styled.button`
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const Footer = styled.footer`
+  background-color: #141414;
+  color: #8c8c8c;
+  padding: 20px;
+  text-align: center;
 `;
 
 
