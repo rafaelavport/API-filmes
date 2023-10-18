@@ -24,6 +24,7 @@ export const MovieList = styled.div`
 export const MovieCard = styled.div`
   background-color: #2a2a2a;
   border: 1px solid #333;
+  margin: 15px;
   border-radius: 10px;
   width: 200px;
   transition: transform 0.2s;
