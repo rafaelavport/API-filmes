@@ -8,7 +8,7 @@
 .container {
   background-color: #141414;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -17,9 +17,10 @@
 
 .movie-container {
   display: flex;
+
   background-color: #141414;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   padding: 20px;
   align-items: center;
 }
