@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Header, SearchContainer, SearchInput, SearchButton, StyledSelect, MovieList, MovieCard, MovieImage, MovieTitle, MovieButton, Footer } from "./style";
+import { Container, h1, Header, SearchContainer, SearchInput, SearchButton, StyledSelect, MovieList, MovieCard, MovieImage, MovieTitle, MovieButton, Footer } from "./style";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -10,6 +10,7 @@ function Home() {
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState(""); // Estado para controlar o gênero selecionado
   const [searchQuery, setSearchQuery] = useState("");
+  const [topMovies, setTopMovies] = useState([]);
 
   const searchMovies = () => {
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${KEY}&language=pt-BR&query=${searchQuery}`)
@@ -26,6 +27,15 @@ function Home() {
         }
         return movies.filter((movie) => movie.genre_ids.includes(selectedGenre));
       };
+
+      useEffect(() => {
+        // Obter os filmes mais populares (top 10)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=pt-BR&page=1`)
+          .then((response) => response.json())
+          .then((data) => {
+            setTopMovies(data.results.slice(0, 10)); // Pegar os 10 primeiros filmes
+          });
+      }, [KEY]);
 
   useEffect(() => {
     // Obter a lista de gêneros
@@ -66,15 +76,21 @@ function Home() {
         <SearchButton onClick={searchMovies}>Buscar</SearchButton>
       </SearchContainer>
     </Header>
-
     <MovieList>
+        {topMovies.map((movie) => (
+          <MovieCard key={movie.id}>
+            <Link to={`/${movie.id}`}>
+              <MovieImage src={`${imagePath}${movie.poster_path}`} alt={movie.title} />
+            </Link>
+          </MovieCard>
+        ))}
+
       {filterMoviesByGenre().map((movie) => (
         <MovieCard key={movie.id}>
-          <MovieImage src={`${imagePath}${movie.poster_path}`} alt={movie.title} />
-          <Link to={`/${movie.id}`}>
-            <MovieButton>Detalhes</MovieButton>
-          </Link>
-        </MovieCard>
+        <Link to={`/${movie.id}`}>
+            <MovieImage src={`${imagePath}${movie.poster_path}`} alt={movie.title} />
+        </Link>
+      </MovieCard>
       ))}
     </MovieList>
 

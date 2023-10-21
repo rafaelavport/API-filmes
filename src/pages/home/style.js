@@ -47,15 +47,15 @@ export const SearchButton = styled.button`
 `;
 
 export const StyledSelect = styled.select`
-  padding: 7px;
+  padding: 6px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
   background-color: #fff;
   color: #333;
-  margin-left: 51vw;
-  margin-top: 2.5vh;
+  margin-left: 53vw;
+  margin-top: 3vh;
 `;
 
 export const MovieList = styled.div`
@@ -70,7 +70,7 @@ export const MovieCard = styled.div`
   margin:20px;
   border-radius: 10px;
   width: 15vw;
-  height: 30vh;
+  height: 42.5vh;
   transition: transform 0.5s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -85,21 +85,6 @@ export const MovieCard = styled.div`
 export const MovieImage = styled.img`
   width: 100%;
   height: auto;
-`;
-
-export const MovieButton = styled.button`
-  background-color: #e50914;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 3vh 3.2vw;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: #ff0f24;
-  }
 `;
 
 export const Footer = styled.footer`

@@ -6,7 +6,7 @@
 }
 
 .container {
-  background-color: #141414;
+  width: 100%;
   color: white;
   font-family: monospace;
   padding: 20px;
@@ -17,8 +17,6 @@
 
 .movie-container {
   display: flex;
-
-  background-color: #141414;
   color: white;
   font-family: monospace;
   padding: 20px;
@@ -26,7 +24,7 @@
 }
 
 .img_movie {
-  max-width: 62vh;
+  max-width: 33.7%;
   height: auto;
   flex: 1; 
   margin-right: 20px;
