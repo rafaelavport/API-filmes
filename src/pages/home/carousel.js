@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'; // Importe o Link corretamente
+import ('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 const CarouselContainer = styled.div`
   width: 100%;
@@ -11,41 +12,49 @@ const CarouselContainer = styled.div`
 const CarouselItem = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 300px; // Altura do carousel
-  background-size: cover;
-  background-position: center;
-  color: #fff; // Cor do texto dentro do carousel
-  background-image: 10px;
-`;
+  justify-content: space-between; /* Posição à esquerda e à direita */
+  height: 300px; /* Altura do carousel */
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Cor do texto dentro do carousel */
+  padding: 20px; /* Espaçamento interno */
 
-const CarouselCaption = styled.div`
-  background: rgba(0, 0, 0, 0.5); // Fundo escuro para o texto
-  padding: 10px;
+  // Estilize a imagem do filme à esquerda
+  .movie-image {
+    border-radius: 10px;
+    width: 300px; /* Largura da imagem */
+    height: 100%; /* Altura igual à do contêiner */
+    margin-left: 150px;
+    background-size: cover; /* Para preencher a largura */
+    background-position: left center; /* Alinhar à esquerda */
+  }
+
+  .movie-info {
+    font-family: 'Bebas-Neue', sans-serif;
+    width: calc(100% - 150px); /* Largura do restante para título e sinopse */
+    padding-right: 170px;
+    padding-left: 60px; /* Espaçamento à esquerda do título e sinopse */
+  }
+  h4{
+    margin-bottom: 25vh;
+  }
 `;
 
 const Carousel = ({ topMovies, imagePath }) => (
   <CarouselContainer id="movieCarousel" className="carousel slide" data-ride="carousel">
     <div className="carousel-inner">
       {topMovies.map((movie, index) => (
-        <CarouselItem key={movie.id} className={`carousel-item${index === 0 ? " active" : ""}`} style={{ backgroundImage: `url(${imagePath}${movie.poster_path})`, width: 200 }}>
-          <Link to={`/${movie.id}`}> {/* Use o Link aqui */}
-            <CarouselCaption>
-              <h3>{movie.title} </h3>
-              <p>{movie.overview}</p>
-            </CarouselCaption>
-          </Link>
+        <CarouselItem key={movie.id} className={`carousel-item${index === 0 ? " active" : ""}`}>
+                <h4>Recomendação do dia: </h4>
+          <div className="movie-image" style={{ backgroundImage: `url(${imagePath}${movie.poster_path})` }}></div>
+          <div className="movie-info">
+            <Link to={`/${movie.id}`}>
+              <h1>{movie.title}</h1>
+            </Link>
+            <p>{movie.overview}</p>
+          </div>
         </CarouselItem>
       ))}
     </div>
-    <a className="carousel-control-prev" href="#movieCarousel" role="button" data-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="sr-only">Anterior</span>
-    </a>
-    <a className="carousel-control-next" href="#movieCarousel" role="button" data-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="sr-only">Próximo</span>
-    </a>
   </CarouselContainer>
 );
 

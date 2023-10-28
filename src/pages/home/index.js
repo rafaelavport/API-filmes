@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Header, SearchContainer, SearchInput, SearchButton, StyledSelect, MovieList, MovieCard, MovieImage, Footer } from "./style";
 import { Link } from 'react-router-dom';
 import Carousel from './carousel.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Home() {
   const imagePath = "https://image.tmdb.org/t/p/w500";
@@ -27,7 +28,7 @@ function Home() {
           return movies;
         }
         return movies.filter((movie) => movie.genre_ids.includes(selectedGenre));
-      };
+      };  
 
       useEffect(() => {
         document.title = "CineFlix";
@@ -76,7 +77,7 @@ function Home() {
       </Header>
 
       <Carousel topMovies={topMovies} imagePath={imagePath} />
-
+            
       <MovieList>
         {filterMoviesByGenre().map((movie) => (
           <MovieCard key={movie.id}>
