@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-.img_movie {
-  max-width: 100%;
-  height: auto;
-}
 
 .container {
   width: 100%;
@@ -24,8 +20,7 @@
 }
 
 .img_movie {
-  max-width: 33.7%;
-  height: auto;
+  max-width: 29%;
   flex: 1; 
   margin-right: 20px;
 }

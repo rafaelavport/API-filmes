@@ -84,7 +84,7 @@ export const MovieCard = styled.div`
 
 export const MovieImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
 `;
 
 export const Footer = styled.footer`

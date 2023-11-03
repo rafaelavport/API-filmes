@@ -23,19 +23,19 @@ const CarouselItem = styled.div`
     border-radius: 10px;
     width: 300px; /* Largura da imagem */
     height: 100%; /* Altura igual à do contêiner */
-    margin-left: 150px;
+    margin-left: 40px;
     background-size: cover; /* Para preencher a largura */
     background-position: left center; /* Alinhar à esquerda */
   }
 
   .movie-info {
     font-family: 'Bebas-Neue', sans-serif;
-    width: calc(100% - 150px); /* Largura do restante para título e sinopse */
+    width: calc(100% - 100px); /* Largura do restante para título e sinopse */
     padding-right: 170px;
     padding-left: 60px; /* Espaçamento à esquerda do título e sinopse */
   }
   h4{
-    margin-bottom: 25vh;
+    margin-bottom: 35vh;
   }
 `;
 
